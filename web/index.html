@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-theme="Azul">
+  <main class="contenedor">
+    <div class="cabecera">
+      <h1 class="titulo">Calculadora</h1>
+      <select id="selector-tema" data-testid="theme-select" aria-label="Seleccionar tema">
+        <option value="Azul">Azul</option>
+        <option value="Verde">Verde</option>
+        <option value="Amarillo">Amarillo</option>
+      </select>
+    </div>
+
+    <input
+      type="text"
+      id="pantalla"
+      data-testid="display"
+      class="pantalla"
+      readonly
+      aria-label="Pantalla de resultado"
+    />
+
+    <div id="error-mensaje" data-testid="error-message" class="error-mensaje" hidden>
+      Introduce una operación aritmética válida.
+    </div>
+
+    <div class="teclado">
+      <button data-testid="btn-clear" data-value="C" class="btn btn-accion">C</button>
+      <button data-testid="btn-backspace" data-value="⌫" class="btn btn-accion">⌫</button>
+      <button data-testid="btn-divide" data-value="÷" class="btn btn-operador">÷</button>
+      <button data-testid="btn-multiply" data-value="×" class="btn btn-operador">×</button>
+
+      <button data-testid="btn-7" data-value="7" class="btn btn-numero">7</button>
+      <button data-testid="btn-8" data-value="8" class="btn btn-numero">8</button>
+      <button data-testid="btn-9" data-value="9" class="btn btn-numero">9</button>
+      <button data-testid="btn-subtract" data-value="-" class="btn btn-operador">-</button>
+
+      <button data-testid="btn-4" data-value="4" class="btn btn-numero">4</button>
+      <button data-testid="btn-5" data-value="5" class="btn btn-numero">5</button>
+      <button data-testid="btn-6" data-value="6" class="btn btn-numero">6</button>
+      <button data-testid="btn-add" data-value="+" class="btn btn-operador">+</button>
+
+      <button data-testid="btn-1" data-value="1" class="btn btn-numero">1</button>
+      <button data-testid="btn-2" data-value="2" class="btn btn-numero">2</button>
+      <button data-testid="btn-3" data-value="3" class="btn btn-numero">3</button>
+      <button data-testid="btn-equals" data-value="=" class="btn btn-igual">=</button>
+
+      <button data-testid="btn-0" data-value="0" class="btn btn-numero">0</button>
+      <button data-testid="btn-dot" data-value="." class="btn btn-numero">.</button>
+    </div>
+
+    <p id="estado" data-testid="status" class="estado">Tema: Azul</p>
+  </main>
+
+  <script src="calculator.js"></script>
+</body>
+</html>
